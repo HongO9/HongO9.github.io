@@ -1,0 +1,350 @@
+/* Change the colours below to give the website a different mood. */
+:root {
+  --blue-900: #17324d;
+  --blue-700: #245778;
+  --blue-500: #4f86a3;
+  --blue-100: #dcecf2;
+  --cream: #fcf8ef;
+  --cream-dark: #f2eadb;
+  --ink: #23313b;
+  --white: #ffffff;
+  --shadow: 0 12px 30px rgba(23, 50, 77, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Adjust this value to make the whole page feel more or less spacious. */
+.container {
+  width: min(1120px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--cream-dark);
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 76px;
+  gap: 2rem;
+}
+
+.logo {
+  color: var(--blue-900);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a,
+.project-card a {
+  color: var(--blue-700);
+  font-weight: bold;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.nav-links a:hover,
+.project-card a:hover,
+.nav-links a:focus-visible,
+.project-card a:focus-visible {
+  color: var(--blue-900);
+}
+
+/* Visible keyboard focus helps visitors who navigate without a mouse. */
+a:focus-visible {
+  outline: 3px solid var(--blue-500);
+  outline-offset: 4px;
+}
+
+.welcome-section {
+  background: var(--blue-900);
+  color: var(--white);
+  min-height: 520px;
+  display: grid;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-section::after {
+  background: var(--blue-700);
+  border-radius: 50%;
+  content: '';
+  height: 420px;
+  opacity: 0.35;
+  position: absolute;
+  right: -120px;
+  top: -140px;
+  width: 420px;
+}
+
+.welcome-content {
+  padding: 5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow,
+.section-label,
+.card-number {
+  color: var(--blue-500);
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+}
+
+.welcome-section .eyebrow {
+  color: var(--blue-100);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--blue-900);
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+h1 {
+  color: var(--white);
+  font-size: clamp(3.2rem, 8vw, 6.8rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.2rem;
+  max-width: 800px;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 1.4rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.6rem;
+}
+
+.intro {
+  font-size: 1.25rem;
+  max-width: 590px;
+  margin: 0 0 2rem;
+}
+
+.button {
+  background: var(--cream);
+  color: var(--blue-900);
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--blue-100);
+}
+
+.content-section,
+.contact-section {
+  padding: 6rem 0;
+}
+
+.narrow-content {
+  max-width: 800px;
+}
+
+.narrow-content p:last-child {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.tinted-section {
+  background: var(--blue-100);
+}
+
+.interest-grid,
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2.5rem;
+}
+
+.interest-item {
+  border-top: 2px solid var(--blue-500);
+  padding-top: 1.25rem;
+}
+
+.interest-number {
+  color: var(--blue-700);
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.interest-item p,
+.project-card p {
+  margin-bottom: 0;
+}
+
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+}
+
+.project-card .card-number {
+  margin-bottom: 2.5rem;
+}
+
+.project-card a {
+  margin-top: 1.5rem;
+}
+
+.contact-section {
+  background: var(--blue-700);
+  color: var(--white);
+}
+
+.contact-content {
+  align-items: end;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.contact-section h2 {
+  color: var(--white);
+}
+
+.contact-section .section-label {
+  color: var(--blue-100);
+}
+
+.contact-section p:last-child {
+  margin-bottom: 0;
+}
+
+.email-link {
+  border-bottom: 2px solid var(--cream);
+  color: var(--white);
+  font-size: 1.15rem;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+}
+
+.email-link:hover,
+.email-link:focus-visible {
+  border-color: var(--blue-100);
+  color: var(--blue-100);
+}
+
+.site-footer {
+  background: var(--blue-900);
+  color: var(--blue-100);
+  font-size: 0.9rem;
+  padding: 1.5rem 0;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: min(100% - 2rem, 600px);
+  }
+
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    gap: 0.5rem 1rem;
+  }
+
+  .welcome-section {
+    min-height: 470px;
+  }
+
+  .welcome-content {
+    padding: 4rem 0;
+  }
+
+  .content-section,
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .interest-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .interest-number,
+  .project-card .card-number {
+    margin-bottom: 1rem;
+  }
+
+  .contact-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* Small screens get less horizontal spacing so text remains easy to read. */
+@media (max-width: 420px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .nav-links {
+    font-size: 0.95rem;
+  }
+}
