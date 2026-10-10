@@ -27,15 +27,25 @@
   <main>
     <!-- Hero Section -->
     <section class="welcome-section" aria-labelledby="welcome-heading">
-      <div class="container welcome-content animate-fade-in">
-        <p class="eyebrow">Psychology Student &amp; Observer</p>
-        <h1 id="welcome-heading">Understanding minds, one quiet detail at a time.</h1>
-        <p class="intro">
-          Welcome to my corner of the web. I explore human behavior, creative stillness, and the art of paying attention.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary-button" href="#about">Get to know me</a>
-          <a class="button secondary-button" href="#projects">Explore work</a>
+      <div class="container welcome-wrapper">
+        <div class="welcome-content animate-fade-in">
+          <p class="eyebrow">Psychology Student &amp; Observer</p>
+          <h1 id="welcome-heading">Understanding minds, one quiet detail at a time.</h1>
+          <p class="intro">
+            Welcome to my corner of the web. I explore human behavior, creative stillness, and the art of paying attention.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary-button" href="#about">Get to know me</a>
+            <a class="button secondary-button" href="#projects">Explore work</a>
+          </div>
+        </div>
+        <!-- 首页新增视觉焦点卡片 -->
+        <div class="hero-visual-card">
+          <div class="hero-card-inner">
+            <span class="hero-card-tag">Focus of the Season</span>
+            <p class="hero-card-quote">“Empathy is not just a feeling; it is a rigorous practice of attention.”</p>
+            <span class="hero-card-author">— Kira's Journal</span>
+          </div>
         </div>
       </div>
     </section>
@@ -55,14 +65,19 @@
               I believe that understanding people starts with noticing the small things—a shift in vocal tone, the pacing of a quiet room, or the routines that keep us grounded. For me, psychology isn't just an academic path; it's a way to cultivate genuine empathy.
             </p>
             <p class="about-personal-note">
-              When I'm not studying human behavior or reading, you can find me practicing mindful calligraphy or working on my freestyle endurance in the pool—recently, I've been dedicating my afternoons to improving my freestyle swimming technique.
+              When I'm not studying human behavior or reading psychological literature, you can find me practicing mindful calligraphy or immersing myself in quiet study spaces.
             </p>
           </div>
 
+          <!-- 将不搭的书架图改为富有质感的纯排版思辨引用卡片 -->
           <div class="about-visual-card">
-            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Quiet study space and books" class="about-img">
-            <div class="about-img-caption">
-              <span>Reading &amp; Reflection space</span>
+            <div class="quote-card-inner">
+              <span class="quote-symbol">&ldquo;</span>
+              <p class="quote-main">Quiet observation is often the loudest form of understanding.</p>
+              <div class="quote-footer">
+                <span class="dot"></span>
+                <span>Mindful Study &amp; Reflection</span>
+              </div>
             </div>
           </div>
         </div>
@@ -97,8 +112,13 @@
           </article>
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">04</span>
-            <h3>Fitness &amp; Swim</h3>
-            <p>Staying grounded through movement, daily routines, and freestyle swimming practice.</p>
+            <h3>Creative Writing</h3>
+            <p>Translating internal reflections and observations into essays and journal notes.</p>
+          </article>
+          <article class="interest-item highlight-item">
+            <span class="interest-number" aria-hidden="true">05</span>
+            <h3>Mindful Routine</h3>
+            <p>Staying grounded through daily intentional habits, quiet walks, and balance.</p>
           </article>
         </div>
       </div>
@@ -185,7 +205,6 @@
   </footer>
 
   <script>
-    // Header shadow & blur on scroll
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 30) {
