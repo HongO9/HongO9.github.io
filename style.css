@@ -1,24 +1,24 @@
 /* ==========================================================================
-   Warm & Airy Design System for Kira (Optimized Details)
+   Warm & Airy Design System for Kira (Refined & Brightened)
    ========================================================================== */
 
 :root {
-  --color-bg: #fcf9f2;               /* Warm oatmeal cream base */
-  --color-surface: #ffffff;          /* Clean white for cards */
-  --color-surface-tint: #f6efe3;     /* Soft apricot tint for sections */
-  --color-primary: #382d27;          /* Deep warm espresso ink */
-  --color-primary-dark: #231c18;     /* Deepest warm charcoal */
-  --color-accent: #c26d52;           /* Warm terracotta accent */
-  --color-accent-light: #f4e8e2;     /* Soft peach tint */
-  --color-text-main: #423630;        /* Main readable warm text */
-  --color-text-muted: #75675f;       /* Secondary muted brown text */
-  --color-border: #e8decb;           /* Warm subtle border */
+  --color-bg: #fdfbf7;              /* 更明亮、通透的柔和米白 */
+  --color-surface: #ffffff;          /* 纯白卡片 */
+  --color-surface-tint: #f6efe6;     /* 更温润的浅杏色分区底色 */
+  --color-primary: #382d27;          /* 深邃温暖的墨色 */
+  --color-primary-dark: #231c18;     /* 炭黑色 */
+  --color-accent: #b86244;           /* 更具活力的陶土橙红调 */
+  --color-accent-light: #f7ede8;     /* 柔和浅桃红气泡背景 */
+  --color-text-main: #423630;        /* 主正文色 */
+  --color-text-muted: #786a62;       /* 辅助文本色 */
+  --color-border: #ede4d3;           /* 细腻温润的边框色 */
   
   --font-serif: 'Fraunces', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
   
-  --shadow-subtle: 0 10px 30px -5px rgba(56, 45, 39, 0.04);
-  --shadow-hover: 0 20px 40px -10px rgba(56, 45, 39, 0.08);
+  --shadow-subtle: 0 10px 30px -5px rgba(56, 45, 39, 0.03);
+  --shadow-hover: 0 20px 40px -10px rgba(56, 45, 39, 0.07);
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -54,7 +54,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(252, 249, 242, 0.9);
+  background-color: rgba(253, 251, 247, 0.88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   transition: var(--transition-smooth);
@@ -62,7 +62,7 @@ body {
 
 .site-header.scrolled {
   border-bottom-color: var(--color-border);
-  box-shadow: 0 4px 20px rgba(56, 45, 39, 0.04);
+  box-shadow: 0 4px 20px rgba(56, 45, 39, 0.03);
 }
 
 .nav {
@@ -99,7 +99,6 @@ body {
   font-size: 0.95rem;
   text-decoration: none;
   transition: var(--transition-smooth);
-  position: relative;
 }
 
 .nav-links a:hover,
@@ -108,13 +107,13 @@ body {
 }
 
 /* ==========================================================================
-   Hero Section (Generous Top Padding to Avoid Overlap)
+   Hero Section (Enhanced with Visual Focus Card)
    ========================================================================== */
 
 .welcome-section {
-  background: linear-gradient(135deg, #423630 0%, #29211d 100%);
+  background: linear-gradient(135deg, #3d312b 0%, #241c18 100%);
   color: #ffffff;
-  padding: 8rem 0 7rem; /* Increased top spacing for clean separation */
+  padding: 8rem 0 7rem;
   position: relative;
   overflow: hidden;
 }
@@ -122,19 +121,26 @@ body {
 .welcome-section::after {
   content: '';
   position: absolute;
-  top: -120px;
-  right: -120px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(194, 109, 82, 0.25) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(184, 98, 68, 0.28) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
 
-.welcome-content {
+.welcome-wrapper {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
   position: relative;
   z-index: 2;
-  max-width: 760px;
+}
+
+.welcome-content {
+  max-width: 620px;
 }
 
 .eyebrow {
@@ -142,13 +148,13 @@ body {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #d89b88;
+  color: #df9e87;
   margin: 0 0 1rem 0;
 }
 
 h1 {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -157,10 +163,10 @@ h1 {
 }
 
 .intro {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   line-height: 1.7;
-  color: #dfd5cb;
-  max-width: 580px;
+  color: #e5ded7;
+  max-width: 540px;
   margin: 0 0 2rem 0;
 }
 
@@ -168,6 +174,41 @@ h1 {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+/* 首页新增的视觉焦点卡片样式 */
+.hero-visual-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 2.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.hero-card-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #df9e87;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero-card-quote {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #fcf9f5;
+  font-style: italic;
+  margin: 0 0 1.5rem 0;
+}
+
+.hero-card-author {
+  font-size: 0.88rem;
+  color: #c4b5ac;
 }
 
 .button {
@@ -188,7 +229,7 @@ h1 {
 }
 
 .primary-button:hover {
-  background-color: #b05e44;
+  background-color: #a45337;
   transform: translateY(-2px);
 }
 
@@ -237,7 +278,7 @@ h2 {
 }
 
 /* ==========================================================================
-   About Me Layout with Visual Card
+   About Me Layout with Quote Visual Card
    ========================================================================== */
 
 .about-grid {
@@ -280,33 +321,58 @@ h2 {
   margin-bottom: 0 !important;
 }
 
+/* 替代图片的高级纯排版视觉卡片 */
 .about-visual-card {
-  background-color: var(--color-surface);
+  background: linear-gradient(145deg, #ffffff 0%, #f9f4ed 100%);
   border: 1px solid var(--color-border);
   border-radius: 12px;
-  overflow: hidden;
+  padding: 3rem;
   box-shadow: var(--shadow-subtle);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.about-img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
+.quote-card-inner {
+  position: relative;
+  z-index: 2;
 }
 
-.about-img-caption {
-  padding: 1.2rem 1.5rem;
-  font-size: 0.9rem;
+.quote-symbol {
   font-family: var(--font-serif);
+  font-size: 5rem;
+  color: var(--color-accent);
+  opacity: 0.25;
+  line-height: 0.6;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.quote-main {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.45;
   color: var(--color-primary);
   font-style: italic;
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  flex-grow: 1;
+  margin: 0 0 2rem 0;
+}
+
+.quote-footer {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.quote-footer .dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
 }
 
 /* ==========================================================================
@@ -334,12 +400,12 @@ h2 {
 }
 
 /* ==========================================================================
-   Interest Grid (4 Core Items)
+   Interest Grid (5 Items - Balanced 3+2 or Responsive Grid)
    ========================================================================== */
 
 .interest-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -355,7 +421,7 @@ h2 {
 .interest-item:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
-  border-color: #d4c4ae;
+  border-color: #dfd0bc;
 }
 
 .interest-number {
@@ -382,7 +448,7 @@ h2 {
 }
 
 /* ==========================================================================
-   Project Cards with Minimal Icons
+   Project Cards
    ========================================================================== */
 
 .project-grid {
@@ -490,7 +556,7 @@ h2 {
 }
 
 .contact-text-area .section-label {
-  color: #d89b88;
+  color: #df9e87;
 }
 
 .contact-section h2 {
@@ -499,7 +565,7 @@ h2 {
 }
 
 .contact-text-area p {
-  color: #dfd5cb;
+  color: #e5ded7;
   margin: 0;
   font-size: 1.02rem;
 }
@@ -522,8 +588,8 @@ h2 {
 }
 
 .email-link:hover {
-  border-color: #d89b88;
-  color: #f4e8e2;
+  border-color: #df9e87;
+  color: #f7ede8;
 }
 
 .social-links {
@@ -535,7 +601,7 @@ h2 {
 }
 
 .social-links a {
-  color: #dfd5cb;
+  color: #e5ded7;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -586,7 +652,8 @@ h2 {
    ========================================================================== */
 
 @media (max-width: 900px) {
-  .about-grid {
+  .about-grid,
+  .welcome-wrapper {
     grid-template-columns: 1fr;
   }
 }
