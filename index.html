@@ -10,21 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
   <!-- Header / Navigation -->
   <header class="site-header" id="header">
     <nav class="nav container" aria-label="Main navigation">
       <a class="logo" href="#top">Kira<span>.</span></a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#interests" class="nav-link">Interests</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
     <!-- Hero Section -->
     <section class="welcome-section" aria-labelledby="welcome-heading">
       <div class="container welcome-content animate-fade-in">
@@ -54,19 +54,15 @@
             <p>
               I believe that understanding people starts with noticing the small things—a shift in vocal tone, the pacing of a quiet room, or the routines that keep us grounded. For me, psychology isn't just an academic path; it's a way to cultivate genuine empathy.
             </p>
+            <p class="about-personal-note">
+              When I'm not studying human behavior or reading, you can find me practicing mindful calligraphy or working on my freestyle endurance in the pool—recently, I've been dedicating my afternoons to improving my freestyle swimming technique.
+            </p>
           </div>
 
-          <div class="about-sidebar">
-            <div class="mini-card">
-              <span class="mini-card-tag">Currently Reading</span>
-              <h3>Thinking, Fast and Slow</h3>
-              <p>Exploring how our minds are shaped by dual cognitive systems and intuitive biases.</p>
-            </div>
-
-            <div class="mini-card">
-              <span class="mini-card-tag">Daily Rituals</span>
-              <h3>Calm &amp; Craft</h3>
-              <p>Morning coffee, mindful calligraphy practice, and observing human patterns in daily life.</p>
+          <div class="about-visual-card">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Quiet study space and books" class="about-img">
+            <div class="about-img-caption">
+              <span>Reading &amp; Reflection space</span>
             </div>
           </div>
         </div>
@@ -81,38 +77,28 @@
             <p class="section-label">Passions &amp; Focus</p>
             <h2 id="interests-heading">Skills &amp; Interests</h2>
           </div>
-          <p class="section-subtext">Practices that nourish my mind, focus my attention, and keep me balanced.</p>
+          <p class="section-subtext">The core practices that nourish my mind and keep me balanced.</p>
         </div>
         <div class="interest-grid">
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">01</span>
-            <h3>Behavioral Observation</h3>
-            <p>Analyzing interpersonal dynamics, cognitive patterns, and the subtle cues that shape connection.</p>
+            <h3>Psychology</h3>
+            <p>Exploring behavioral patterns, cognitive processes, and interpersonal dynamics.</p>
           </article>
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">02</span>
-            <h3>Reading &amp; Reflection</h3>
-            <p>Immersing myself in psychological literature, essays, and philosophy to expand mental models.</p>
+            <h3>Calligraphy</h3>
+            <p>Practising patient, expressive lettering as a form of active meditation.</p>
           </article>
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">03</span>
-            <h3>Mindful Calligraphy</h3>
-            <p>Practising patient, expressive lettering as a form of active meditation and detail focus.</p>
+            <h3>Reading</h3>
+            <p>Immersing myself in psychological literature, essays, and thoughtful prose.</p>
           </article>
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">04</span>
-            <h3>Balanced Fitness</h3>
-            <p>Maintaining physical movement and restorative routines to foster cognitive and emotional resilience.</p>
-          </article>
-          <article class="interest-item">
-            <span class="interest-number" aria-hidden="true">05</span>
-            <h3>Acoustic Soundscapes</h3>
-            <p>Exploring ambient music and instrumental sound as spaces for deep focus and emotional recharge.</p>
-          </article>
-          <article class="interest-item">
-            <span class="interest-number" aria-hidden="true">06</span>
-            <h3>Creative Writing</h3>
-            <p>Translating abstract thoughts and observational sketches into structured, thoughtful prose.</p>
+            <h3>Fitness &amp; Swim</h3>
+            <p>Staying grounded through movement, daily routines, and freestyle swimming practice.</p>
           </article>
         </div>
       </div>
@@ -131,8 +117,10 @@
         <div class="project-grid">
           <article class="project-card">
             <div class="card-top">
-              <span class="card-number">Project 01</span>
-              <span class="card-tag">Research Essay</span>
+              <div class="card-icon-wrapper">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              </div>
+              <span class="card-tag">Research</span>
             </div>
             <h3>Empathy in Digital Spaces</h3>
             <p>An exploratory literature review examining how text-based communication alters emotional resonance among peers.</p>
@@ -141,7 +129,9 @@
 
           <article class="project-card">
             <div class="card-top">
-              <span class="card-number">Project 02</span>
+              <div class="card-icon-wrapper">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
               <span class="card-tag">Field Study</span>
             </div>
             <h3>The Architecture of Quiet</h3>
@@ -151,8 +141,10 @@
 
           <article class="project-card">
             <div class="card-top">
-              <span class="card-number">Project 03</span>
-              <span class="card-tag">Creative Journal</span>
+              <div class="card-icon-wrapper">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <span class="card-tag">Journal</span>
             </div>
             <h3>Mindful Typographies</h3>
             <p>A personal visual experiment combining psychological state descriptors with hand-rendered calligraphy forms.</p>
@@ -187,12 +179,13 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
-      <p>&copy; 2026 Kira. Designed with intention and warmth.</p>
+      <p>&copy; 2026 Kira. Made with curiosity.</p>
       <a href="#top" class="back-to-top">Back to top &uarr;</a>
     </div>
   </footer>
 
   <script>
+    // Header shadow & blur on scroll
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 30) {
