@@ -277,7 +277,7 @@ h2 {
 }
 
 /* ==========================================================================
-   About Me Layout & 横版长方形大图样式
+   About Me Layout & 完美横版长方形图片排版
    ========================================================================== */
 
 .about-grid {
@@ -320,7 +320,7 @@ h2 {
   margin-bottom: 0 !important;
 }
 
-/* 右侧视觉卡片：强制横版长方形比例与自适应 */
+/* 图片外层卡片：确保结构稳定不乱 */
 .about-visual-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -332,10 +332,18 @@ h2 {
   justify-content: space-between;
 }
 
+/* 横版长方形图片容器与比例锁定 */
+.about-img-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* 强制锁定精致的横版长方形比例 */
+  overflow: hidden;
+  background-color: #f3efe6;
+}
+
 .about-img {
   width: 100%;
-  height: 220px; /* 横版宽屏长方形高度 */
-  object-fit: cover; /* 保证图片不变形、填满横版区域 */
+  height: 100%;
+  object-fit: cover; /* 自动裁剪填充横版区域，绝不变形 */
   display: block;
 }
 
