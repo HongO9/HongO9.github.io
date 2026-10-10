@@ -1,4 +1,4 @@
-<!doctype html>
+=<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -68,7 +68,7 @@
             </p>
           </div>
 
-          <!-- 右侧卡片：完美匹配 CSS 样式 -->
+          <!-- 右侧卡片：铺满的猫咪图片 -->
           <div class="about-visual-card">
             <div class="about-img-wrapper">
               <img src="cat.jpg" alt="Kiro, my lovely pet cat" class="about-img">
@@ -185,4 +185,31 @@
             <a href="#top" aria-label="LinkedIn Profile">LinkedIn</a>
             <span class="separator">/</span>
             <a href="#top" aria-label="Substack Journal">Substack</a>
-            <span class
+            <span class="separator">/</span>
+            <a href="#top" aria-label="GitHub Repository">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Kira. Made with curiosity.</p>
+      <a href="#top" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
