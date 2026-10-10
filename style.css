@@ -277,7 +277,7 @@ h2 {
 }
 
 /* ==========================================================================
-   About Me Layout & 左右等高、图片占比三分之二的稳固排版
+   About Me Layout & 铺满的猫咪图片排版
    ========================================================================== */
 
 .about-grid {
@@ -330,26 +330,22 @@ h2 {
   flex-direction: column;
 }
 
-/* 图片容器：占用卡片约 2/3 的高度空间，完整展示整张猫咪照片 */
+/* 图片容器：占用卡片约 2/3 高度 */
 .about-img-wrapper {
   width: 100%;
   flex: 2;
   min-height: 240px;
-  background-color: #faf6f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
 .about-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 保证整张猫咪照片完整显示，不裁剪、不变形 */
+  object-fit: cover; /* 改回 cover，让猫咪图片完美铺满整个框 */
   display: block;
 }
 
-/* 文字图注：占用卡片约 1/3 的剩余空间 */
+/* 文字图注：占用卡片约 1/3 高度 */
 .about-img-caption {
   flex: 1;
   padding: 1.2rem 1.5rem;
@@ -440,7 +436,7 @@ h2 {
 }
 
 /* ==========================================================================
-   Project Cards
+   Project Cards & 缩小图标尺寸
    ========================================================================== */
 
 .project-grid {
@@ -473,11 +469,12 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+/* 缩小卡片图标容器及内部图标 */
 .card-icon-wrapper {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background-color: var(--color-accent-light);
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,8 +482,8 @@ h2 {
 }
 
 .card-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px; /* 将图标大小缩小，精致不突兀 */
 }
 
 .card-tag {
