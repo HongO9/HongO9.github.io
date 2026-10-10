@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kira's personal website as a Psychology student.">
-  <title>Kira | Psychology Student</title>
+  <meta name="description" content="Kira's personal website - Psychology student, curious thinker, and detail observer.">
+  <title>Kira | Psychology Student & Curious Thinker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="logo" href="#top">Kira</a>
+      <a class="logo" href="#top">Kira<span>.</span></a>
       <ul class="nav-links">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#interests">Skills &amp; Interests</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -21,91 +25,172 @@
   </header>
 
   <main id="top">
+    <!-- Hero Section -->
     <section class="welcome-section" aria-labelledby="welcome-heading">
-      <div class="container welcome-content">
-        <p class="eyebrow">Psychology student &amp; curious thinker</p>
-        <h1 id="welcome-heading">Hello, I’m Kira.</h1>
-        <p class="intro">Welcome to my corner of the web, where I share the ideas, interests, and creative projects that inspire me.</p>
-        <a class="button" href="#about">Get to know me</a>
+      <div class="container welcome-content animate-fade-in">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span>Psychology Student &amp; Curious Thinker</span>
+        </div>
+        <h1 id="welcome-heading">Decoding the mind, designing with empathy.</h1>
+        <p class="intro">
+          Welcome to my digital sanctuary. I explore the subtle threads connecting human behavior, quiet moments, and meaningful design.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary-button" href="#about">Get to know me</a>
+          <a class="button secondary-button" href="#projects">View projects</a>
+        </div>
       </div>
     </section>
 
+    <!-- About Me Section -->
     <section class="content-section" id="about" aria-labelledby="about-heading">
       <div class="container narrow-content">
         <p class="section-label">A little about me</p>
-        <h2 id="about-heading">About Me</h2>
-        <p>Hello! I am Kira, a passionate Psychology student. I am deeply interested in understanding human behavior and mental processes. In my free time, I enjoy exploring creative and physical activities that help me maintain a balanced lifestyle.</p>
+        <h2 id="about-heading">The intersection of curiosity and introspection.</h2>
+        <div class="about-story">
+          <p class="lead-text">
+            Hello! I am Kira, an undergraduate psychology student fascinated by the invisible architecture of human thought and emotion.
+          </p>
+          <p>
+            Beyond textbooks and research papers, I find joy in observing the ordinary details of daily life—how a conversation shifts in tone, the pacing of quiet rooms, and the art of deliberate slowness. To me, psychology is not just an academic discipline; it is a lens for cultivating deeper empathy and understanding.
+          </p>
+          <p>
+            Whether I'm diving into cognitive science theories, practicing meditative calligraphy, or reflecting through writing, I strive to keep a balance between rigorous inquiry and creative expression.
+          </p>
+        </div>
       </div>
     </section>
 
+    <!-- Skills & Interests Section -->
     <section class="content-section tinted-section" id="interests" aria-labelledby="interests-heading">
       <div class="container">
-        <p class="section-label">Things I enjoy</p>
-        <h2 id="interests-heading">Skills &amp; Interests</h2>
+        <div class="section-header-group">
+          <div>
+            <p class="section-label">Passions &amp; Focus</p>
+            <h2 id="interests-heading">Skills &amp; Interests</h2>
+          </div>
+          <p class="section-subtext">The practices and subjects that nourish my mind and keep me grounded.</p>
+        </div>
         <div class="interest-grid">
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">01</span>
-            <h3>Calligraphy</h3>
-            <p>Practising patient, expressive lettering and finding focus in the details.</p>
+            <h3>Behavioral Observation</h3>
+            <p>Analyzing interpersonal dynamics, cognitive patterns, and the subtle cues that shape human connection.</p>
           </article>
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">02</span>
-            <h3>Fitness</h3>
-            <p>Making time for movement as part of a balanced and energising routine.</p>
+            <h3>Reading &amp; Reflection</h3>
+            <p>Immersing myself in psychological literature, essays, and philosophy to expand my mental models.</p>
           </article>
           <article class="interest-item">
             <span class="interest-number" aria-hidden="true">03</span>
-            <h3>Music</h3>
-            <p>Enjoying music as a way to recharge, reflect, and stay inspired.</p>
+            <h3>Mindful Calligraphy</h3>
+            <p>Practising patient, expressive lettering as a form of active meditation and attention to detail.</p>
+          </article>
+          <article class="interest-item">
+            <span class="interest-number" aria-hidden="true">04</span>
+            <h3>Balanced Fitness</h3>
+            <p>Maintaining physical movement and mindful routines to foster overall cognitive and emotional resilience.</p>
+          </article>
+          <article class="interest-item">
+            <span class="interest-number" aria-hidden="true">05</span>
+            <h3>Acoustic Soundscapes</h3>
+            <p>Exploring ambient music and instrumental sound as spaces for deep focus and emotional recharge.</p>
+          </article>
+          <article class="interest-item">
+            <span class="interest-number" aria-hidden="true">06</span>
+            <h3>Creative Writing</h3>
+            <p>Translating abstract thoughts and observational sketches into structured, narrative prose.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Projects Section -->
     <section class="content-section" id="projects" aria-labelledby="projects-heading">
       <div class="container">
-        <p class="section-label">A few things I am exploring</p>
-        <h2 id="projects-heading">Projects</h2>
+        <div class="section-header-group">
+          <div>
+            <p class="section-label">Academic &amp; Creative work</p>
+            <h2 id="projects-heading">My Projects &amp; Studies</h2>
+          </div>
+          <p class="section-subtext">A snapshot of explorations bridging theory, inquiry, and craft.</p>
+        </div>
         <div class="project-grid">
-          <!-- Replace these sample titles and descriptions with your own projects. -->
           <article class="project-card">
-            <p class="card-number">Project 01</p>
-            <h3>Project Title</h3>
-            <p>Write a short description of a project, idea, or class activity here.</p>
-            <a href="#contact">Ask me about this project</a>
+            <div class="card-top">
+              <span class="card-number">Project 01</span>
+              <span class="card-tag">Research Essay</span>
+            </div>
+            <h3>Empathy in Digital Spaces</h3>
+            <p>An exploratory literature review examining how text-based communication alters emotional resonance and empathy recognition among peers.</p>
+            <a href="#contact" class="card-link">Discuss research<span>&rarr;</span></a>
           </article>
+
           <article class="project-card">
-            <p class="card-number">Project 02</p>
-            <h3>Project Title</h3>
-            <p>Use this space to share what you made, learned, or would like to explore.</p>
-            <a href="#contact">Ask me about this project</a>
+            <div class="card-top">
+              <span class="card-number">Project 02</span>
+              <span class="card-tag">Field Study</span>
+            </div>
+            <h3>The Architecture of Quiet</h3>
+            <p>A qualitative observational study documenting how environmental sound and lighting influence stress recovery in campus study lounges.</p>
+            <a href="#contact" class="card-link">Ask about findings<span>&rarr;</span></a>
           </article>
+
           <article class="project-card">
-            <p class="card-number">Project 03</p>
-            <h3>Project Title</h3>
-            <p>Add another personal, academic, or creative project description here.</p>
-            <a href="#contact">Ask me about this project</a>
+            <div class="card-top">
+              <span class="card-number">Project 03</span>
+              <span class="card-tag">Creative Journal</span>
+            </div>
+            <h3>Mindful Typographies</h3>
+            <p>A personal visual experiment combining psychological state-of-mind descriptors with hand-rendered expressive calligraphy forms.</p>
+            <a href="#contact" class="card-link">Explore project<span>&rarr;</span></a>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact-section" id="contact" aria-labelledby="contact-heading">
       <div class="container contact-content">
-        <div>
+        <div class="contact-text-area">
           <p class="section-label">Let’s connect</p>
-          <h2 id="contact-heading">Contact</h2>
-          <p>Have a question or want to say hello? Send me an email.</p>
+          <h2 id="contact-heading">Open for conversation, research chats, or a friendly hello.</h2>
+          <p>Whether you want to discuss psychology, share a book recommendation, or collaborate on a creative idea, my inbox is always open.</p>
         </div>
-        <a class="email-link" href="mailto:s235225@hsu.edu.hk">Email Kira at s235225@hsu.edu.hk</a>
+        <div class="contact-action-area">
+          <a class="email-link" href="mailto:s235225@hsu.edu.hk">s235225@hsu.edu.hk</a>
+          <div class="social-links">
+            <a href="#top" aria-label="LinkedIn Profile">LinkedIn</a>
+            <span class="separator">/</span>
+            <a href="#top" aria-label="Substack Journal">Substack</a>
+            <span class="separator">/</span>
+            <a href="#top" aria-label="GitHub Repository">GitHub</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Kira. Made with care.</p>
+    <div class="container footer-container">
+      <p>&copy; 2026 Kira. Designed with intention and quiet care.</p>
+      <a href="#top" class="back-to-top">Back to top &uarr;</a>
     </div>
   </footer>
+
+  <script>
+    // Simple scroll effect for header shadow & blur
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
