@@ -277,12 +277,12 @@ h2 {
 }
 
 /* ==========================================================================
-   About Me Layout with Image Card & Caption Below
+   About Me Layout & Prominent Image Display
    ========================================================================== */
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.4fr; /* 左侧文本稍窄，右侧图片区域更宽 */
   gap: 2.5rem;
   align-items: stretch;
 }
@@ -320,7 +320,7 @@ h2 {
   margin-bottom: 0 !important;
 }
 
-/* 图片展示卡片及下方图注样式 */
+/* 右侧视觉大图卡片样式 */
 .about-visual-card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -333,9 +333,9 @@ h2 {
 
 .about-img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 360px; /* 放大图片高度，使其更有视觉冲击力且充满区块 */
   object-fit: cover;
+  display: block;
 }
 
 .about-img-caption {
