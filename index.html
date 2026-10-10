@@ -68,6 +68,7 @@
             </p>
           </div>
 
+          <!-- 横版长方形图片卡片，下方带单行介绍 -->
           <div class="about-visual-card">
             <img src="cat.jpg" alt="Kiro, Kira's pet cat" class="about-img">
             <div class="about-img-caption">
@@ -132,4 +133,81 @@
           <article class="project-card">
             <div class="card-top">
               <div class="card-icon-wrapper">
-                <svg class="card-icon" viewBox="
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              </div>
+              <span class="card-tag">Research</span>
+            </div>
+            <h3>Empathy in Digital Spaces</h3>
+            <p>An exploratory literature review examining how text-based communication alters emotional resonance among peers.</p>
+            <a href="#contact" class="card-link">Discuss research<span>&rarr;</span></a>
+          </article>
+
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-icon-wrapper">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <span class="card-tag">Field Study</span>
+            </div>
+            <h3>The Architecture of Quiet</h3>
+            <p>A qualitative observational study documenting how environmental sound influences stress recovery in study lounges.</p>
+            <a href="#contact" class="card-link">Ask about findings<span>&rarr;</span></a>
+          </article>
+
+          <article class="project-card">
+            <div class="card-top">
+              <div class="card-icon-wrapper">
+                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <span class="card-tag">Journal</span>
+            </div>
+            <h3>Mindful Typographies</h3>
+            <p>A personal visual experiment combining psychological state descriptors with hand-rendered calligraphy forms.</p>
+            <a href="#contact" class="card-link">Explore project<span>&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-content">
+        <div class="contact-text-area">
+          <p class="section-label">Let’s connect</p>
+          <h2 id="contact-heading">Open for conversation, research chats, or a friendly hello.</h2>
+          <p>Whether you want to discuss psychology, share a book recommendation, or say hi, my inbox is always open.</p>
+        </div>
+        <div class="contact-action-area">
+          <a class="email-link" href="mailto:s235225@hsu.edu.hk">s235225@hsu.edu.hk</a>
+          <div class="social-links">
+            <a href="#top" aria-label="LinkedIn Profile">LinkedIn</a>
+            <span class="separator">/</span>
+            <a href="#top" aria-label="Substack Journal">Substack</a>
+            <span class="separator">/</span>
+            <a href="#top" aria-label="GitHub Repository">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Kira. Made with curiosity.</p>
+      <a href="#top" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
